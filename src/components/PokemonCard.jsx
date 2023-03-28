@@ -10,12 +10,12 @@ const pokemonList = [
 ];
 
 const Figure = () => {
-  const pokemon = pokemonList[1];
+  const pokemon = pokemonList[0];
 
     return (
       <figure>
         { pokemon.imgSrc !== undefined  ? <img src={pokemon.imgSrc} alt="Image of pokemon" /> : <p>???</p>}
-        <figcaption>bulbasaur</figcaption>
+        <figcaption>{pokemon.name}</figcaption>
       </figure>
     );
 };
