@@ -1,7 +1,5 @@
 
-const Figure = (props) => {
-  const { name, imgSrc} = props;
-
+const PokemonCard = ({ name, imgSrc}) => {
 
     return (
       <figure>
@@ -11,4 +9,4 @@ const Figure = (props) => {
     );
 };
 
-export default Figure;
+export default PokemonCard;
