@@ -14,7 +14,7 @@ const Figure = () => {
 
     return (
       <figure>
-        { pokemon.imgSrc !== undefined  ? <img src={pokemon.imgSrc} alt="Image of pokemon" /> : <p>???</p>}
+        { pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={`Image of ${pokemon.name} pokemon`} /> : <p>???</p>}
         <figcaption>{pokemon.name}</figcaption>
       </figure>
     );
