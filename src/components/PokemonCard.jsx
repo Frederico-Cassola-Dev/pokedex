@@ -1,21 +1,12 @@
-const pokemonList = [
-  {
-    name: "bulbasaur",
-    imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
-  {
-    name: "mew",
-  },
-];
 
-const Figure = () => {
-  const pokemon = pokemonList[0];
+const Figure = (props) => {
+  const { name, imgSrc} = props;
+
 
     return (
       <figure>
-        { pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={`Image of ${pokemon.name} pokemon`} /> : <p>???</p>}
-        <figcaption>{pokemon.name}</figcaption>
+        { imgSrc ? <img src={imgSrc} alt={`Image of ${name} pokemon`} /> : <p>???</p>}
+        <figcaption>{name}</figcaption>
       </figure>
     );
 };
