@@ -13,7 +13,7 @@ const pokemonList = [
 ];
 
 function App() {
-  const {name, imgSrc} = pokemonList[0];
+  const {name, imgSrc} = pokemonList[1];
 
   return (
     <div className="App">
