@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <PokemonCard pokemonName={pokemonList[pokemonIndex].name} pokemonImage={pokemonList[pokemonIndex].imgSrc} />
+        <PokemonCard pokemon={pokemonList[pokemonIndex]} />
         {pokemonIndex > 0 && <button onClick={handleClickPrevious}>précédent</button>}
         {pokemonIndex < pokemonList.length - 1 && <button onClick={handleClickNext}>suivant</button>}
       </div>
@@ -52,3 +52,4 @@ function App() {
 }
 
 export default App;
+
