@@ -19,6 +19,5 @@ PokemonCard.propTypes = {
     pokemonImage: PropTypes.string.isRequired
   })
 }
-  
 
 export default PokemonCard;
