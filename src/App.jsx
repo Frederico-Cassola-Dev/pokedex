@@ -7,21 +7,19 @@ import pokemonList from "./assets/pokemonList";
 import { useState } from "react";
 
 function App() {
-  const [pokemon, setPokemon] = useState(pokemonList[0]);
+  const [showPokemon, setShowPokemon] = useState(pokemonList);
 
-  const handleClickPokemon = () => {
-    setPokemon(
-      pokemonList.filter((item) => item.name === pokemon.name)
-    );
+  const handleClickPokemon = (name) => {
+    setShowPokemon(pokemonList.filter((item) => item.name === name));
   };
-
-  console.log("🚀 ~ file: App.jsx:11 ~ App ~ pokemon:", pokemon);
 
   return (
     <div className="App">
-      <NavBar list={pokemonList} handleClickPokemon={handleClickPokemon} />
-
-      <PokemonCard pokemon={pokemon} />
+      <NavBar
+        pokemonListNames={pokemonList}
+        choosePokemon={handleClickPokemon}
+      />
+      <PokemonCard {...showPokemon[0]} />
     </div>
   );
 }

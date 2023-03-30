@@ -1,9 +1,12 @@
-const NavBar = ({ list,handleClickPokemon }) => {
-
+const NavBar = ({ pokemonListNames, choosePokemon }) => {
   return (
     <nav>
-      {list.map((pokemon) => {
-        return (<button key={pokemon.name} onClick={handleClickPokemon}>{pokemon.name}</button>);
+      {pokemonListNames.map((pokemon) => {
+        return (
+          <button key={pokemon.name} onClick={() => choosePokemon(pokemon.name)}>
+            {pokemon.name}
+          </button>
+        );
       })}
     </nav>
   );
