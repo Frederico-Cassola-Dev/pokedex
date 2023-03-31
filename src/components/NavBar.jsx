@@ -1,6 +1,6 @@
 const NavBar = ({ index, setIndex, list }) => {
   const handleClickPrevious = () => {
-    index === 2 && alert("pika pikachu !!!");
+    index === 4 && alert("pika pikachu !!!");
     setIndex(index - 1);
   };
 
